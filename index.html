@@ -68,6 +68,9 @@
     <header>
         <h1>🏛️ PROMETHEUS AUTONOMOUS VC</h1>
         <p>NETWORK: OKX X LAYER | AGENT TRADE KIT: ONLINE | TREASURY BALANCE: 5,420,000 USDC</p>
+        <button id="connect-wallet" style="margin-top: 10px; padding: 8px 15px; background: #000; border: 1px solid var(--cyan); color: var(--cyan); border-radius: 4px; cursor: pointer; font-family: inherit; font-weight: bold; transition: all 0.3s;">
+            🔌 CONNECT OKX WALLET TO PITCH
+        </button>
     </header>
 
     <div class="dashboard">
@@ -98,6 +101,16 @@
     </div>
 
     <script>
+        document.getElementById('connect-wallet').addEventListener('click', async () => {
+            const btn = document.getElementById('connect-wallet');
+            btn.innerText = "Connecting to OKX Web3...";
+            setTimeout(() => {
+                btn.style.background = "var(--cyan)";
+                btn.style.color = "#000";
+                btn.innerHTML = "✅ WALLET CONNECTED: 0x9f8...3aB | STAKE 50 USDC";
+                addLog('scanner-log', `<br><span style="color:var(--gold)"><b>[TX] Stake-to-Pitch Transaction Confirmed via OKX Wallet.</b></span><br>`, 0);
+            }, 1500);
+        });
         function addLog(id, text, delay) { setTimeout(() => { document.getElementById(id).innerHTML += `<div>${text}</div>`; document.getElementById(id).scrollTop = 9999; }, delay); }
         function randomHash() { return '0x' + Math.random().toString(16).substr(2, 40); }
 
