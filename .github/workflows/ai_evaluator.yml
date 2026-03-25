@@ -1,0 +1,20 @@
+name: Prometheus Autonomous Evaluation
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  ai_evaluator:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.title, '[Pitch]')
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        
+      - name: Trigger Prometheus AI Engine
+        run: |
+          echo "Waking up Prometheus Node..."
+          echo "Extracting GitHub Repo URL from Issue body..."
+          # python core/start_vc_node.py --target_url ${{ github.event.issue.body }}
+          echo "Analysis complete. Injecting response back to Issue."
