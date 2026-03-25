@@ -50,3 +50,7 @@ pip install -r requirements.txt
 # 启动普罗米修斯投资引擎
 python core/start_vc_node.py
 ```
+
+🛡️ Proof of AI Evaluation (ZK-ML 验证):
+Prometheus 并不是一个中心化的黑盒。每一次 AI 对代码的评估过程，都会通过 ZK-ML（零知识机器学习）生成一个底层的推理证明（Inference Proof），并将该证明的 Hash 连同投资决策一起上链。
+人类无法篡改评分，AI 必须自证清白。实现了真正的 “Don't Trust, Verify”。
