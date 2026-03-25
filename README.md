@@ -54,3 +54,7 @@ python core/start_vc_node.py
 🛡️ Proof of AI Evaluation (ZK-ML 验证):
 Prometheus 并不是一个中心化的黑盒。每一次 AI 对代码的评估过程，都会通过 ZK-ML（零知识机器学习）生成一个底层的推理证明（Inference Proof），并将该证明的 Hash 连同投资决策一起上链。
 人类无法篡改评分，AI 必须自证清白。实现了真正的 “Don't Trust, Verify”。
+
+🚦 Security & Risk Control: 24小时人类时间锁否决权 (Time-lock Veto)
+为了防止大模型产生幻觉（Hallucination）导致资金被恶意套取，Prometheus 触发投资交易后，资金并不会立刻到达开发者钱包，而是进入一个 24 小时的 Time-lock (时间锁) 智能合约。
+在此期间，基金的 LP (流动性提供者 / 多签持有人) 可以审查 AI 的研判报告。如果发现 AI 被恶意代码欺骗，LP 拥有一票否决权（Veto）来撤回资金。AI 负责提效决策，人类负责最终风控兜底。
