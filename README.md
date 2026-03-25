@@ -1,4 +1,8 @@
 # Prometheus-Fund (普罗米修斯) 🏛️
+![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![OKX Onchain OS](https://img.shields.io/badge/Network-OKX_X_Layer-black.svg?logo=okx)
+![Agent Trade Kit](https://img.shields.io/badge/Integration-Agent_Trade_Kit-success.svg)
 **The First Fully Autonomous AI Venture Capital Node on OKX Onchain OS**
 
 ## 1. 愿景：告别人类偏见，让代码自己说话
